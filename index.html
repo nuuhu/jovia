@@ -78,7 +78,7 @@
         </style>
     </head>
     <body id="test" onload="compareStr()">
-        <center><div id="dag"><span id="spin"></span></div></center><br>
+        <center><div id="dag"><p id="spen"></p><p id="spin"></p></div></center><br>
            <h1><center>Mercy</center></h1>
          <div id="pic"><img src="mercy.JPG" alt="mercy" ></div>
          
@@ -164,7 +164,7 @@
         var a=d.getSeconds();
        
         if(c<12){
-            document.getElementById("spin").innerHTML=a;
+            document.getElementById("spen").innerHTML=a;
             document.getElementById("spin").innerHTML="good morning";
             
             document.getElementById("dag").style.backgroundImage="url('morning.jpg')";
