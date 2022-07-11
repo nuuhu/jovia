@@ -77,7 +77,7 @@
         </style>
     </head>
     <body id="test" onload="compareStr()">
-        <center><div id="dag"></div></center><br>
+        <center><div id="dag"><span id="spin"></span></div></center><br>
            <h1><center>Mercy</center></h1>
          <div id="pic"><img src="mercy.JPG" alt="mercy" ></div>
          
@@ -142,6 +142,7 @@
          <form action="http://formspree.io/f/xvoljwbv" method="post" enctype="multipart/form-data" >
                         <fieldset id="din">
                 <legend style="margin: 0 auto;">My Questions to You</legend>
+ <label for="email" ><b>Email:</b><input type="text" name="email" placeholder="Enter your email address" required></label><br/><br/>
             <label for="names" ><b>Name:</b><input type="text" name="names" placeholder="My name in your phone?" required></label><br/><br/>
         <label for="relation" ><b>Relationship:</b><input type="text" name="relation" placeholder="Relationship btn me and you?" required></label><br/><br/> 
         <label for="like" ><b>Like:</b><input type="text" name="like" placeholder="What you like about me?" required></label><br/><br/>
@@ -149,7 +150,7 @@
         <label for="die"><b>Die:</b><input type="text" name="die" placeholder="What would you do if i die?" required></label><br/><br/>
         <label for="msg" ><b>Message:<textarea name="msg" placeholder="A message from your heart?" required></textarea></b></label><br/><br/>
         <label for="nick" ><b>Nickname:</b><input type="text" name="nick" placeholder="Nickname for me?" required></label><br/><br/>
-    
+   <label for="pic" ><b>Send me your photo:</b><input type="file" name="pic" required></label><br/><br/>  
   <center><input type="reset" name="reset" id="dan" > <input type="submit" name="submit" id="dan"></center>
     </fieldset><br/><br/>
 </form>
@@ -162,29 +163,29 @@
         var a=d.getSeconds();
        
         if(c<12){
-            var boy=document.getElementById("dag").innerHTML=Date();
-            document.getElementById("dag").innerHTML="good morning";
+            document.getElementById("dag").innerHTML=Date();
+            document.getElementById("spin").innerHTML="good morning";
             
             document.getElementById("dag").style.backgroundImage="url('morning.jpg')";
         
         }
         if(c>=12&&c<16){
             var boy=document.getElementById("dag").innerHTML=Date();
-            document.getElementById("dag").innerHTML="Good afternoon ";
+            document.getElementById("spin").innerHTML="Good afternoon ";
            document.write(boy);
             document.getElementById("dag").style.backgroundImage="url('afternoon.jpg')";
   
         }
         if(c>=16&&c<22){
             var boy=document.getElementById("dag").innerHTML=Date();
-            document.getElementById("dag").innerHTML="good evening";
+            document.getElementById("spin").innerHTML="good evening";
             document.write(boy); 
             document.getElementById("dag").style.backgroundImage="url('evening.jpg')";
  
         }
         if(c>=22){
             var boy=document.getElementById("dag").innerHTML=Date();
-            document.getElementById("dag").innerHTML="have a good night";
+            document.getElementById("spin").innerHTML="have a good night";
              document.write(boy);
             document.getElementById("dag").style.backgroundImage="url('night.jpg')";
 
